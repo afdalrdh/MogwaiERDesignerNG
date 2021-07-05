@@ -60,6 +60,16 @@ import java.util.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import javax.swing.JFrame;
+
+
 public class JGraphEditor extends DefaultScrollPane implements GenericModelEditor {
 
     private static final Logger LOGGER = Logger.getLogger(JGraphEditor.class);
@@ -386,12 +396,50 @@ public class JGraphEditor extends DefaultScrollPane implements GenericModelEdito
             public void commandNewTable(Point2D aLocation) {
                 new AddTableCommand(aLocation,
                         null, false).execute();
+                
+                // AddTableCommand.getValue(DefaultAction.HOTKEY_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_D, KeyEvent.CTRL_DOWN_MASK));
             }
+
+            // public void keyPressed(KeyEvent ke) {
+            //     int keyCode = ke.getKeyCode();
+            //     if (keyCode == 66) {
+            //         Point2D location = new Point2D.Double(0, 0);
+            //         commandNewTable(location);
+            //     }
+            // }
+
+            // public void keyReleased(KeyEvent ke) {
+            //     int keyCode = ke.getKeyCode();
+            //     if (keyCode == 67) {
+            //         Point2D location = new Point2D.Double(0, 0);
+            //         commandNewTable(location);
+            //     }
+            //   }
+
+            //   public void keyTyped(KeyEvent ke) {
+            //     char keyChar = ke.getKeyChar();
+            //     if (keyChar == 'a') {
+            //         Point2D location = new Point2D.Double(0, 0);
+            //         commandNewTable(location);
+            //     }
+            //   }
 
             @Override
             public void commandNewComment(Point2D aLocation) {
+                // Point2D location = new Point2D.Double(0, 0);
+                // commandNewTable(location);
+                
+                
                 new AddCommentCommand(aLocation)
                         .execute();
+
+                // DefaultAction commentAction = new DefaultAction(
+                //     e -> {
+                //         commandSetTool(ToolEnum.COMMENT);
+                //     }, this, ERDesignerBundle.COMMENT);
+
+                // AddCommentCommand.getValue(DefaultAction.HOTKEY_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_SPACE, KeyEvent.CTRL_DOWN_MASK));
+
             }
 
             @Override

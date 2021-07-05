@@ -81,6 +81,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.awt.geom.Point2D;
+
 
 public class OutlineComponent extends DefaultPanel implements
 		ResourceHelperProvider {

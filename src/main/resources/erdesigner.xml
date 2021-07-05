@@ -118,15 +118,29 @@
         </Entry>
         <Entry id="HAND">
             <Icon>/de/erdesignerng/icons/hand.gif</Icon>
+            <Text lang="de">Alt+F1</Text>
+            <Text lang="en">Alt+F1</Text>
         </Entry>
         <Entry id="ENTITY">
             <Icon>/de/erdesignerng/icons/entity.gif</Icon>
+            <Text lang="de">Alt+F2</Text>
+            <Text lang="en">Alt+F2</Text>
         </Entry>
         <Entry id="RELATION">
             <Icon>/de/erdesignerng/icons/relation1.gif</Icon>
+            <Text lang="de">Alt+F3</Text>
+            <Text lang="en">Alt+F3</Text>
+        </Entry>
+        
+        <Entry id="COMMENT">
+            <Icon>/de/erdesignerng/icons/comment_add.gif</Icon>
+            <Text lang="de">Alt+F4</Text>
+            <Text lang="en">Alt+F4</Text>
         </Entry>
         <Entry id="VIEWTOOL">
             <Icon>/de/erdesignerng/icons/view.gif</Icon>
+            <Text lang="de">Alt+F5</Text>
+            <Text lang="en">Alt+F5</Text>
         </Entry>
         <Entry id="ZOOM">
             <Text lang="de">Vergrößerung</Text>
@@ -538,9 +552,6 @@
         <Entry id="DOMAINEDITOR">
             <Text lang="de">Domänen Editor...</Text>
             <Text lang="en">Domain editor...</Text>
-        </Entry>
-        <Entry id="COMMENT">
-            <Icon>/de/erdesignerng/icons/comment_add.gif</Icon>
         </Entry>
         <Entry id="EXPORTINGTABLENEEDSPRIMARYKEY">
             <Text lang="de">Die exportierende Tabelle muss einen Primärschlüssel haben!</Text>

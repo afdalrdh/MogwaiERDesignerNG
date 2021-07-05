@@ -102,16 +102,19 @@ public interface ERDesignerBundle {
 	/** \u005a\u006f\u006f\u006d\u0020\u006f\u0075\u0074. */
 	String ZOOMOUT = "ZOOMOUT";
 
-	/** . */
+	/** \u0041\u006c\u0074\u002b\u0046\u0031. */
 	String HAND = "HAND";
 
-	/** . */
+	/** \u0041\u006c\u0074\u002b\u0046\u0032. */
 	String ENTITY = "ENTITY";
 
-	/** . */
+	/** \u0041\u006c\u0074\u002b\u0046\u0033. */
 	String RELATION = "RELATION";
 
-	/** . */
+	/** \u0041\u006c\u0074\u002b\u0046\u0034. */
+	String COMMENT = "COMMENT";
+
+	/** \u0041\u006c\u0074\u002b\u0046\u0035. */
 	String VIEWTOOL = "VIEWTOOL";
 
 	/** \u005a\u006f\u006f\u006d. */
@@ -413,9 +416,6 @@ public interface ERDesignerBundle {
 
 	/** \u0044\u006f\u006d\u0061\u0069\u006e\u0020\u0065\u0064\u0069\u0074\u006f\u0072\u002e\u002e\u002e. */
 	String DOMAINEDITOR = "DOMAINEDITOR";
-
-	/** . */
-	String COMMENT = "COMMENT";
 
 	/** \u0054\u0068\u0065\u0020\u0065\u0078\u0070\u006f\u0072\u0074\u0069\u006e\u0067\u0020\u0074\u0061\u0062\u006c\u0065\u0020\u006e\u0065\u0065\u0064\u0073\u0020\u0074\u006f\u0020\u0068\u0061\u0076\u0065\u0020\u0061\u0020\u0070\u0072\u0069\u006d\u0061\u0072\u0079\u0020\u006b\u0065\u0079\u0021. */
 	String EXPORTINGTABLENEEDSPRIMARYKEY = "EXPORTINGTABLENEEDSPRIMARYKEY";

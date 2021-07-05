@@ -340,6 +340,8 @@ public final class ERDesignerComponent implements ResourceHelperProvider {
         // Required by Java3D
         JPopupMenu.setDefaultLightWeightPopupEnabled(false);
 
+        
+
         DefaultAction theReverseEngineerAction = new DefaultAction(
                 new ReverseEngineerCommand(), this,
                 ERDesignerBundle.REVERSEENGINEER);
@@ -371,6 +373,8 @@ public final class ERDesignerComponent implements ResourceHelperProvider {
 
         DefaultAction theNewAction = new DefaultAction(
                 e -> commandNew(), this, ERDesignerBundle.NEWMODEL);
+                theNewAction.putValue(DefaultAction.HOTKEY_KEY, KeyStroke
+                .getKeyStroke(KeyEvent.VK_N, KeyEvent.CTRL_DOWN_MASK));
 
         DefaultAction theLruAction = new DefaultAction(this,
                 ERDesignerBundle.RECENTLYUSEDFILES);
@@ -387,6 +391,8 @@ public final class ERDesignerComponent implements ResourceHelperProvider {
                     }
                 }, this, ERDesignerBundle.HAND);
 
+                // handAction.getValue(DefaultAction.HOTKEY_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_C, KeyEvent.CTRL_DOWN_MASK));
+
         commentAction = new DefaultAction(
                 e -> {
                     commandSetTool(ToolEnum.COMMENT);
@@ -394,6 +400,9 @@ public final class ERDesignerComponent implements ResourceHelperProvider {
                         commentButton.setSelected(true);
                     }
                 }, this, ERDesignerBundle.COMMENT);
+        
+                // commentButton.getValue(DefaultAction.HOTKEY_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_C, KeyEvent.CTRL_DOWN_MASK));
+
 
         entityAction = new DefaultAction(
                 e -> {
@@ -757,6 +766,16 @@ public final class ERDesignerComponent implements ResourceHelperProvider {
         entityButton = new DefaultToggleButton(entityAction);
         commentButton = new DefaultToggleButton(commentAction);
         viewButton = new DefaultToggleButton(viewAction);
+
+        // handButton.getInputMap().put(KeyStroke.getKeyStroke("F1"),"pressed");
+        // entityButton.getInputMap().put(KeyStroke.getKeyStroke("released F2"),"released");
+        // handAction.putValue(DefaultAction.HOTKEY_KEY, KeyStroke.getKeyStroke("F1"));
+
+        handButton.setMnemonic(KeyEvent.VK_F1);
+        entityButton.setMnemonic(KeyEvent.VK_F2);
+        relationButton.setMnemonic(KeyEvent.VK_F3);
+        commentButton.setMnemonic(KeyEvent.VK_F4);
+        viewButton.setMnemonic(KeyEvent.VK_F5);
 
         ButtonGroup theGroup = new ButtonGroup();
         theGroup.add(handButton);
